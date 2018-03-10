@@ -1,0 +1,14 @@
+INSERT INTO `tariff_plane_enable`(`Enable_date`, `Tariff_plane_Id`, `Account_Id`, `Speed_limit_threshold_Id`)
+	VALUES
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Empty' LIMIT 1), 1, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Empty' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Empty' LIMIT 1), 2, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Empty' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Limit basic' LIMIT 1), 3, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Limit basic' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit extend' LIMIT 1), 4, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit extend' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit extend' LIMIT 1), 5, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit extend' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1), 6, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1), 7, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1), 8, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit basic' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit super' LIMIT 1), 9, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit super' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit super' LIMIT 1), 10, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Unlimit super' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) ),
+		( NOW(), (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Econom limit' LIMIT 1), 11, (SELECT ID FROM Speed_limit_threshold WHERE Tariff_plane_Id = (SELECT Id FROM `tariff_plane` WHERE `Name` = 'Econom limit' LIMIT 1) AND Ordinal_number = 1 LIMIT 1) )
+		;
